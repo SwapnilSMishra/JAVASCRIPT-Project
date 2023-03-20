@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock Using JS</title>
+    <style>
+        h1
+        {
+
+            text-align: center;
+            font-size:50px;
+            font-family:'Gill Sans';
+            color:aqua;
+            background-color: black;
+        }
+    </style>
+</head>
+<body onload="clock()">
+    <h1> YO </h1>
+</body>
+<script>
+    function clock()
+    {
+        var d=new Date();
+        var h=d.getHours();
+        var m=d.getMinutes();
+        var s=d.getSeconds();
+        var session ="AM";
+        h=h<10 ?"0"+h : h;
+        m=m<10 ?"0"+m: m;
+        s=s<10 ?"0"+s: s;
+        if(h>12)
+        session="PM"
+        document.getElementsByTagName("h1")[0].innerText = h+" "+":"+" "+m+" "+":"+" "+s+" "+session;
+        setTimeout(clock,1000);
+    }
+</script>
+</html>

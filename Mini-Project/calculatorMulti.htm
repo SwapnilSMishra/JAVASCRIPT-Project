@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiFunctional Calculator</title>
+</head>
+<body>
+    <h5>Enter First Number </h5>
+    <input type="text" id="no1">
+    <br>
+    
+    <h5>Enter Second Number </h5>
+    <input type="text" id="no2">
+    <br><br>
+    Select Operation
+    <select id="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">x</option>
+        <option value="/">/</option>
+    </select> <br><br>
+    <button onclick="cal()">
+        CALCULATE
+    </button> <br> <br>
+    <input type="text" id="res" readonly="">
+</body>
+<script type="text/javascript">
+    function cal()
+    {
+        var no1=document.getElementById("no1").value;
+        var no2=document.getElementById("no2").value;
+        var op=document.getElementById("op").value;
+
+        if(op=="+")
+        {
+            var res=parseInt(no1)+parseInt(no2);
+            document.getElementById("res").value=res;
+        }
+
+        if(op=="-")
+        {
+            var res=parseInt(no1)-parseInt(no2);
+            document.getElementById("res").value=res;
+        }
+
+        if(op=="*")
+        {
+            var res=parseInt(no1)*parseInt(no2);
+            document.getElementById("res").value=res;
+        }
+
+        if(op=="/")
+        {
+            var res=parseInt(no1)/parseInt(no2);
+            document.getElementById("res").value=res;
+        }
+  }
+</script>
+</html>
